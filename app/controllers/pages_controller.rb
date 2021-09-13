@@ -14,7 +14,7 @@ class PagesController < ApplicationController
   def create
     @page = Page.new(page_params)
     if @page.save
-      redirect :index
+      redirect_to @page
     else
       render :new
     end
